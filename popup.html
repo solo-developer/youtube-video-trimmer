@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>YouTube Start-End</title>
+  <style>
+    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; padding: 12px; width: 280px; }
+    h3 { margin: 0 0 8px; font-size: 16px; }
+    .row { display: flex; gap: 8px; margin-bottom: 8px; }
+    .row label { flex: 1; font-size: 12px; color: #444; }
+    .row input { width: 100%; padding: 6px; box-sizing: border-box; }
+    .buttons { display: flex; gap: 8px; }
+    button { flex: 1; padding: 8px; cursor: pointer; }
+    .meta { font-size: 12px; color: #666; margin-bottom: 8px; word-break: break-all; }
+    .help { font-size: 11px; color: #666; margin-top: 6px; }
+    .ok { color: #0a7; }
+    .warn { color: #c40; }
+  </style>
+</head>
+<body>
+  <h3>YouTube Start-End</h3>
+  <div id="status" class="meta"></div>
+  <div class="row">
+    <label>
+      Start (seconds)
+      <input id="start" type="number" min="0" step="1" placeholder="e.g. 5" />
+    </label>
+    <label>
+      End (seconds)
+      <input id="end" type="number" min="0" step="1" placeholder="e.g. 120" />
+    </label>
+  </div>
+  <div class="buttons">
+    <button id="save">Save</button>
+    <button id="clear">Clear</button>
+  </div>
+  <div class="help">
+    Tip: leave <b>End</b> empty (or 0) to disable auto-stop. Works on videos and Shorts.
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

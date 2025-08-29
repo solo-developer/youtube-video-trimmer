@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Start-End Controller",
+  "version": "1.0.0",
+  "description": "Automatically play YouTube videos only between specified start and end times (per video).",
+  "permissions": ["storage", "activeTab", "tabs"],
+  "icons": {
+    "128": "icons/icon128.png"
+  },
+  "action": {
+    "default_title": "YouTube Start-End",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://www.youtube.com/*",
+        "*://m.youtube.com/*",
+        "*://youtu.be/*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
