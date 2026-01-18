@@ -32,6 +32,8 @@ The extension icon should now appear in your browser toolbar.
 
 ## Usage
 
+![Usage Screenshot](screenshots/working.png)
+
 1.  **Open a YouTube Video:**
     *   Go to YouTube and play any video or Short.
 
